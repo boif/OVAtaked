@@ -63,9 +63,17 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'zipi2281337p',
         'HOST': 'localhost',
-        'PORT': '54321',
+        'PORT': '5432', #54321 if u use docker
     }
 }
+
+################################ for sqlite
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {

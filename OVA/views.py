@@ -51,7 +51,7 @@ def images(request):
 
     )
 
-def register(request):
+def signup(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         profile_form = ProfileForm(request.POST)

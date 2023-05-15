@@ -14,7 +14,7 @@ urlpatterns = [
     path('addimage/', views.addimage, name='addimage'),
     path('profile/<str:username>/', views.profile, name='profile'),
     path('profilesettings/', views.profilesettings, name='profilesettings'),
-    path('signup/', views.register, name='signup'),
+    path('signup/', views.signup, name='signup'),
     path('login/',
          LoginView.as_view
              (
