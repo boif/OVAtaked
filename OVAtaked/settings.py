@@ -10,6 +10,7 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
+    '0.0.0.0',
     'samkoracingclub.pythonanywhere.com']
 
 INSTALLED_APPS = [
@@ -62,18 +63,18 @@ DATABASES = {
         'NAME': 'OVAtaked',
         'USER': 'postgres',
         'PASSWORD': 'zipi2281337p',
-        'HOST': 'localhost',
-        'PORT': '5432', #54321 if u use docker
-    }
+        'HOST': 'db',
+        'PORT': '5432',
+   }
 }
 
 ################################ for sqlite
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
