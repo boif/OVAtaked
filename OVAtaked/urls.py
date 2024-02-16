@@ -5,6 +5,7 @@ from django.urls import path
 from django.contrib import admin
 from OVA import views, forms
 from django.contrib.auth.views import LoginView, LogoutView
+from OVA.views import ContactView
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -29,6 +30,7 @@ urlpatterns = [
          name='login'),
     path('logout/', LogoutView.as_view(next_page='/'), name='logout'),
     path('admin/', admin.site.urls),
+    path('subscribe/', ContactView.as_view(), name='contact')
 
 ]
 

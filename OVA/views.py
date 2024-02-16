@@ -1,9 +1,11 @@
 from datetime import datetime
 from django.shortcuts import render, redirect
-from OVA.models import Image
-from OVA.forms import RegisterForm, AddImage, ProfileForm
+from OVA.models import Image, Contact
+from OVA.forms import RegisterForm, AddImage, ProfileForm, ContactForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.views.generic import CreateView
+from OVA.models import send
 
 
 
@@ -121,3 +123,14 @@ def profilesettings(request):
             'title': 'Profile settings'
         }
     )
+
+class ContactView(CreateView):
+    model = Contact
+    form_class = ContactForm
+    success_url = '/'
+    template_name = 'app/subscribe.html'
+
+    def form_valid(self, form):
+        form.save()
+        send(form.instance.email)
+        return super().form_valid(form)
