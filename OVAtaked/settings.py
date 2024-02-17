@@ -10,8 +10,7 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    '0.0.0.0',
-    'samkoracingclub.pythonanywhere.com']
+    '0.0.0.0',]
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
@@ -105,6 +104,16 @@ STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+
+# SMTP
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'OVAtaked@gmail.com'
+EMAIL_HOST_PASSWORD = 'zipi2281337g'
+EMAIL_PORT = 587
