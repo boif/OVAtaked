@@ -1,4 +1,3 @@
-from pathlib import Path
 import os
 import posixpath
 
@@ -8,10 +7,7 @@ SECRET_KEY = 'django-insecure-z(gp$^sol8aq3rja)i40#=+v&7w$kdy)l903xc!a#+(q2i#if&
 
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    '0.0.0.0',
-    'samkoracingclub.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
@@ -65,7 +61,7 @@ DATABASES = {
         'PASSWORD': 'zipi2281337p',
         'HOST': 'db',
         'PORT': '5432',
-   }
+    }
 }
 
 ################################ for sqlite
@@ -108,4 +104,3 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-zipi2281337g
