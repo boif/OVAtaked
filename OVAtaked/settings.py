@@ -59,7 +59,7 @@ DATABASES = {
         'NAME': 'OVAtaked',
         'USER': 'postgres',
         'PASSWORD': 'zipi2281337p',
-        'HOST': 'db', #lovalhost if you run localserver
+        'HOST': 'db', #"localhost" if you run localserver
         'PORT': '5432',
     }
 }
