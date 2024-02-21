@@ -3,7 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.utils.translation import gettext_lazy
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from OVA.models import Image, Profile, Contact
+from OVA.models import Image, Profile
 
 class BootstrapAuthenticationForm(AuthenticationForm):
     username = forms.CharField(max_length=254,
@@ -31,8 +31,3 @@ class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['profile_pic', 'vk']
-
-class ContactForm(forms.ModelForm):
-    class Meta:
-        model = Contact
-        fields = ['name', 'email']
